@@ -3,73 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wedding Invitation</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Wedding Invitation | Harish & Deepika Lakshmi</title>
+  <meta name="description" content="Invitation for the wedding ceremony and reception of Venna Venkata Alluri Harish & Deepika Lakshmi. Events in Guntur and Hyderabad.">
+  <link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/svg/1f497.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      background: #fffaf0;
-      font-family: 'Segoe UI', sans-serif;
+    /* Custom Animations */
+    @keyframes fadeIn      { from { opacity: 0; }   to { opacity: 1; } }
+    @keyframes popIn       { 0% { transform: scale(.92); opacity: 0;} 100% { transform: scale(1); opacity: 1; } }
+    .animate-fade-in  { animation: fadeIn 1s both; }
+    .animate-pop-in   { animation: popIn 0.7s cubic-bezier(.76,0,.24,1) both; }
+    /* Custom Button Styles */
+    .btn-green {
+      @apply inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold shadow hover:shadow-lg hover:scale-105 transition;
     }
-    .header {
-      background: #f8e1e1;
-      padding: 20px;
-      text-align: center;
+    .btn-blue {
+      @apply inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold shadow hover:shadow-lg hover:scale-105 transition;
     }
-    .couple-names {
-      font-size: 2rem;
-      color: #b30059;
+    .btn-outline-dark {
+      @apply border border-gray-700 text-gray-700 px-6 py-2 rounded-lg font-semibold bg-opacity-0 hover:bg-gray-900 hover:text-white transition;
     }
-    .section-title {
-      margin-top: 30px;
-      font-size: 1.5rem;
-      color: #800000;
+    /* Glassmorphism for cards */
+    .glass {
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 6px 24px 0 rgba(30,41,59,0.05);
     }
+    /* For iframes */
     iframe {
       width: 100%;
-      height: 300px;
+      height: 260px;
       border: 0;
-      border-radius: 10px;
+      border-radius: 0.75rem;
+      transition: box-shadow .15s;
     }
+    iframe:hover { box-shadow: 0 10px 38px 0 rgba(16,24,39,0.12); }
   </style>
 </head>
-<body>
+<body class="bg-gradient-to-tr from-sky-100 via-slate-50 to-violet-100 min-h-screen font-sans text-gray-800 antialiased">
 
-  <!-- Header with Contact Info -->
-  <div class="header">
-    <h5 class="mb-1">📞 Contact Numbers</h5>
-    <p class="mb-0">Venna V Ram Mohan Rao - <a href="tel:9866230061">9866230061</a></p>
-    <p>Venna V Kasi Rama Rao - <a href="tel:9866230062">9866230062</a></p>
-  </div>
+  <!-- Header / Contacts -->
+  <header class="bg-white-to-b from-slate-200 to-slate-100 py-7 shadow">
+    <div id="contacts-container" class="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl mx-auto px-3">
+      <!-- Cards injected by JS -->
+    </div>
+  </header>
 
-  <div class="container text-center mt-4">
-    <!-- Names -->
-    <h2 class="couple-names">💍 Venna Venkata Alluri Harish & Deepika Lakshmi</h2>
-    <p class="text-muted">Warmly invite you to their wedding celebrations</p>
+  <!-- Hero Section -->
+  <section class="flex flex-col lg:flex-row items-center gap-10 max-w-5xl mx-auto px-6 py-12 animate-fade-in">
+    <!-- Left text/call-to-actions -->
+    <div class="lg:w-1/2 flex flex-col items-start justify-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-700 to-indigo-500 mb-3 drop-shadow animate-pop-in">
+        Venna Venkata Alluri Harish <span class="text-pink-600">&</span> Deepika Lakshmi
+      </h1>
+      <p class="text-lg md:text-xl text-gray-700 mb-6">
+        You're warmly invited to a day of <span class="font-semibold text-indigo-600 decoration-wavy underline">love & celebration</span>!
+      </p>
+      <div class="flex flex-col w-full gap-3">
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Ceremony+of+Harish+and+Deepika&dates=20250807T043000Z/20250807T063000Z&details=Join+us+for+the+wedding+ceremony+at+J+Convention+Guntur&location=Guntur" target="_blank" rel="noopener" class="btn-green">📅 Add Wedding Ceremony – Aug 7, 2025</a>
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Reception+of+Harish+and+Deepika&dates=20250810T133000Z/20250808T163000Z&details=Reception+celebration+at+SP Convention A/C+Miryalaguda&location=Miryalaguda" target="_blank" rel="noopener" class="btn-blue">🎉 Add Reception – Aug 10, 2025</a>
+      </div>
+      <button class="btn-outline-dark mt-7 animate-pop-in">📅 Save the Date</button>
+    </div>
+    <!-- Couple image right -->
+    <div class="lg:w-1/2 flex justify-center mb-7 lg:mb-0">
+      <img src="harishpic.jpeg" class="rounded-full object-cover border-4 border-indigo-200 shadow-2xl w-100 h-100 md:w-100 md:h-100 bg-white animate-pop-in">
+    </div>
+  </section>
 
-    <!-- Marriage Section -->
-    <div class="section-title">👰‍♀️ Wedding Ceremony</div>
-    <p>Date: 00 Month 2025<br>Time: 00:00 AM<br>Location: Sri Venkateswara Kalyana Mandapam, Guntur</p>
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.8839983076074!2d80.44167681473334!3d16.30665218874743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35f1b61a3fc6fd%3A0xabc123456789abcd!2sGuntur%20Kalyana%20Mandapam!5e0!3m2!1sen!2sin!4v1234567890" 
-      allowfullscreen="" 
-      loading="lazy">
-    </iframe>
-
-    <!-- Reception Section -->
-    <div class="section-title">🎉 Reception</div>
-    <p>Date: 00 Month 2025<br>Time: 07:00 PM onwards<br>Location: Hotel Grand Hyatt, Hyderabad</p>
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.124723602039!2d78.48667391482412!3d17.38504428807006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb973df1fdffdf%3A0xabcdefabcdefabcd!2sHotel%20Grand%20Hyatt%2C%20Hyderabad!5e0!3m2!1sen!2sin!4v1234567890" 
-      allowfullscreen="" 
-      loading="lazy">
-    </iframe>
-  </div>
+  <!-- Event Cards -->
+  <main class="max-w-3xl mx-auto text-center px-3 mt-5">
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-7 mb-12">
+      <!-- Wedding Ceremony -->
+      <div class="glass rounded-2xl p-7 shadow-xl flex flex-col gap-3 animate-pop-in hover:shadow-2xl hover:-translate-y-1 transition">
+        <div class="flex items-center gap-2 justify-center mb-2 text-pink-600 text-xl"><span>👰‍♀️</span> <span class="font-bold text-xl">Wedding Ceremony</span></div>
+        <div class="flex items-center gap-2 justify-center">
+          <span class="inline-block bg-pink-100 text-pink-600 px-2 py-1 rounded-md text-xs font-semibold">Aug 7, 2025</span>
+          <span>•</span>
+          <span class="inline-block bg-sky-100 text-sky-700 px-2 py-1 rounded-md text-xs font-semibold">Midnight 12:59</span>
+        </div>
+        <div class="font-medium text-gray-800">📍Y gardens, Pedavadlapudi, Andhra Pradesh</div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.065861783792!2d80.6009057!3d16.413034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35f73b4a0debbf%3A0xf82782cc5bf1c898!2sY%20gardens!5e1!3m2!1sen!2sin!4v1752764913645!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <!-- Reception -->
+      <div class="glass rounded-2xl p-7 shadow-xl flex flex-col gap-3 animate-pop-in hover:shadow-2xl hover:-translate-y-1 transition">
+        <div class="flex items-center gap-2 justify-center mb-2 text-purple-600 text-xl"><span>🎉</span> <span class="font-bold text-xl">Reception</span></div>
+        <div class="flex items-center gap-2 justify-center">
+          <span class="inline-block bg-purple-100 text-purple-600 px-2 py-1 rounded-md text-xs font-semibold">Aug 10, 2025</span>
+          <span>•</span>
+          <span class="inline-block bg-indigo-100 text-indigo-700 px-2 py-1 rounded-md text-xs font-semibold">07:00 PM onwards</span>
+        </div>
+        <div class="font-medium text-gray-800">📍 S P Convention A/C Function and Banquet Halls, Miryalaguda</div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3546.8550244292687!2d79.57700391700058!3d16.868106592064706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3525f7246623d3%3A0xfb5e1ee246672a4e!2sS%20P%20Convention%20A%2FC%20Function%20and%20Banquet%20Halls!5e1!3m2!1sen!2sin!4v1752764707493!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="text-center mt-5 mb-3 text-muted">
-    With love, Venna Family 💖
+  <footer class="fixed left-0 right-0 bottom-0 bg-white/70 backdrop-blur-md text-center text-xs text-gray-700 py-3 z-30 shadow-t animate-fade-in">
+    With love, <span class="font-semibold text-pink-600">Venna Family 💖</span>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ------------- Contacts Injection JS -->
+  <script>
+    const contacts = [
+      { name: "Venna V Ram Mohan Rao", phone: "9866230061" },
+      { name: "Venna V Kasi Rama Rao", phone: "9866230062" }
+    ];
+    const container = document.getElementById("contacts-container");
+    contacts.forEach((contact) => {
+      const card = document.createElement("div");
+      card.className = "glass rounded-2xl p-5 shadow-md flex flex-col gap-1 animate-fade-in hover:scale-105 transition";
+      card.innerHTML = `
+        <p class="font-semibold text-slate-900 text-base mb-1">📞 ${contact.name}</p>
+        <div class="flex items-center gap-3">
+          <a href="tel:${contact.phone}" class="text-blue-700 font-medium underline underline-offset-2 hover:text-blue-900" aria-label="Call ${contact.name}">${contact.phone}</a>
+          <a href="https://wa.me/91${contact.phone}" target="_blank" rel="noopener" aria-label="Message via WhatsApp" class="hover:text-green-600 text-lg" title="WhatsApp">
+            <svg width="20" height="20" fill="currentColor" aria-hidden="true" viewBox="0 0 32 32"><path d="M16.01 3C9.373 3 3.904 8.49 3.904 15.168c0 2.678.686 5.315 1.968 7.618L3 29l6.404-2.097a12.83 12.83 0 0 0 6.615 1.812c6.637 0 12.104-5.49 12.104-12.166C28.123 8.49 22.646 3 16.01 3zm0 22.192a10.5 10.5 0 0 1-5.36-1.48l-.383-.23-3.8 1.242 1.254-3.74-.247-.393A10.18 10.18 0 0 1 5.66 15.17c0-5.672 4.625-10.286 10.352-10.286s10.352 4.614 10.352 10.285c.001 5.67-4.625 10.287-10.352 10.287z"/><path d="M22.137 19.217c-.347-.173-2.047-1.011-2.364-1.128-.317-.115-.548-.173-.78.174-.23.346-.894 1.127-1.096 1.361-.201.234-.403.258-.751.086-.347-.173-1.464-.54-2.788-1.722-1.03-.919-1.725-2.052-1.926-2.4-.201-.346-.022-.533.15-.705.154-.154.347-.404.521-.606.173-.201.23-.346.346-.577.115-.231.058-.433-.028-.605-.087-.173-.78-1.881-1.07-2.573-.282-.68-.569-.586-.78-.598l-.663-.012c-.215 0-.564.08-.859.373-.295.293-1.124 1.098-1.124 2.677s1.152 3.11 1.311 3.326c.16.215 2.271 3.473 5.915 4.735.827.262 1.472.417 1.975.534.829.199 1.584.172 2.18.104.666-.077 2.047-.835 2.338-1.637.289-.802.289-1.49.202-1.637-.086-.147-.315-.23-.662-.403z"/></svg>
+          </a>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  </script>
 </body>
 </html>
